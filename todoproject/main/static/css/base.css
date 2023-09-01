@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.class-header {
+    background-color: black;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text-class {
+    color: white;
+    font-size: 30px;
+}
+
+.header-link-class {
+    color: white;
+    text-decoration-line: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5rem;
+}
+
+.header-link-class:hover {
+    color: bisque;
+}

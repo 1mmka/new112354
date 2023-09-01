@@ -1,0 +1,43 @@
+.todo-content {
+    background-color: DarkTurquoise;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app-class {
+    background-color: black;
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+}
+
+.setting-px {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.into-app {
+    padding: 20px;
+}
+
+.task-style {
+    background-color: LightSlateGray;
+    padding: 20px; 
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.submit-button {
+    background-color: purple;
+    padding: 10px 40px;
+}
+
+.paginator-settings {
+    display: flex;
+    flex-direction: row;
+    gap: 19rem;
+}

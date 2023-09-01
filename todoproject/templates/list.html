@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block some_content %}
+    <div class="todo-content">
+        <div class="todo-app-class">
+            <div class="into-app">
+                <span style="color:black; font-size: 30px;">Todo App</span>
+                <br/><br>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="title" placeholder="enter title" style="padding: 10px 60px;"><button type="submit" class="submit-button">+</button>
+                </form>
+                <br><br>
+                <div class="setting-px">
+                    {% for task in page %}
+                        <div class="task-style">
+                            <span style="position:relative; right:80px;">
+                                {{task.title}}
+                            </span>
+                            <a href="{% url 'deltask' task.pk %}">
+                                <img src="{{ delete.image.url }}" style="width:35px; height:35px; position:absolute; left:300px;
+                                border-radius:15px; margin-left:10px;">
+                            </a>
+                        </div>
+                        <br>
+                    {% endfor %}
+                </div>
+
+                <div>
+                    {% if page.has_previous %}
+                        <a href="?page={{ page.previous_page_number }}">prev</a>
+                    {% endif %}
+
+                    {% if page.has_next %}
+                        <a href="?page={{ page.next_page_number }}">next</a>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
